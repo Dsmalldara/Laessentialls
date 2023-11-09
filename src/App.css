@@ -1,0 +1,59 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  width:100%;
+  padding: 0;
+  text-align: center;
+}
+
+
+.light-brown-gradient {
+  background: linear-gradient(to right, #da790a, #D59E58, #DAA972, #8c4f09, #f57c0a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.details.active {
+  max-height: 1000px; /* Adjust the height as needed */
+  transition: max-height 0.5s ease;
+}
+
+/* Add this CSS class for sticky behavior */
+.stick{
+  /* position: fixed;
+  top: 0;
+  background-color: #fff;  */
+  top: 0;
+  transition: top 2s ease-in-out; 
+  /* z-index: 1000;
+  opacity: 0.95;
+  border-bottom: 1px solid #ccc;  */
+}
