@@ -101,7 +101,7 @@ function Product() {
             </div>
          <div className='relative  md:h-[500px]  px-7'>
          <div className='md:w-[28vw] mx-auto  w-[70vw] h-full flex overflow-hidden '>
-            <div className=' w-full h-full flex  transition-transform duration-1000 ease-in-out'
+            <div className='w-full h-full flex  transition-transform duration-1000 ease-in-out'
             style={{transform:`translateX(-${currentSlide * 100}%)`}}>
                  <img src={`http://${ProductImages[0]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
                 <img src={`http://${ProductImages[1]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
