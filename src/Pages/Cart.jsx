@@ -40,7 +40,7 @@ const ShoppingProgressBar =()=>{
 function Cart() {
   const dispatch = useDispatch()
   const payment = async (token) => {
-  await axios.post('http://localhost:8000/payment', { 
+  await axios.post('https://laessentials.adaptable.app/', { 
     token:token,
     amount: totalAmount * 100
    }
