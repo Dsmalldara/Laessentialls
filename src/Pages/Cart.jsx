@@ -90,11 +90,11 @@ function Cart() {
          <div className='items-start justify-start flex flex-col ml-4 md:ml-6 mt-[2rem]'>
  <h1 className='text-4xl font-poppins font-bold text-black'>Your Cart</h1>
  <p className='text-black font-lato'>
-     you have {cartItems.length} items in your cart
+     you have {cartItems.length} {cartItems.length === 1 ? 'item' :  'items'} in your cart
  </p>
- <div className={`mt-[2rem] mx-auto ${cartItems.length === 0 ? ' md:py-0 py-[3rem]' : 'py-[1rem]'}`}>
+ <div className={`mt-[2rem] mx-auto ${cartItems.length === 0 ? ' md:py-0 py-[3rem]' : 'py-[1.5rem]'}`}>
     {
-      cartItems.length === 0 ? <p className='text-black font-lato text-2xl '>
+      cartItems.length === 0 ? <p className='text-black font-lato text-1xl '>
         Your cart is empty go to <Link to='/' className='text-red-900'>Home</Link> to add items
       
       
@@ -110,7 +110,8 @@ function Cart() {
     
 </div>
         </div>
-        <div className='md:w-[30%] px-[3%] bg-[#fafafa] text-black h-[98%]'>
+       {
+        cartItems.length ?  <div className='md:w-[30%] px-[3%] bg-[#fafafa] text-black h-[98%]'>
         <div className=' h-full rounded-md bg-[#fafafa] bg-opacity-90 backdrop-blur-md text-white font-lato  pt-1 '>
            <div>
            <ShoppingProgressBar/>
@@ -158,6 +159,8 @@ function Cart() {
 
             </div>  
         </div>
+        : null
+       }
 
     </div>
   )
