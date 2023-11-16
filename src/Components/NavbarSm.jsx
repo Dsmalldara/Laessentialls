@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { MdPerson2 } from "react-icons/md";
 
 function NavbarSm() {
-    const cart = useSelector(state => state.cart.productData)
+    const cart = useSelector(state => state.cart.productData)    
     const userInfo = useSelector(state=>state.cart.userInfo)
     const [isOpen, setIsOpen] = useState(false);
 
