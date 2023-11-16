@@ -40,15 +40,24 @@ const ShoppingProgressBar =()=>{
 function Cart() {
   const dispatch = useDispatch()
   const payment = async (token) => {
-  await axios.post('https://laessentials.adaptable.app/', { 
-    token:token,
-    amount: totalAmount * 100
-   }
-   )
-   dispatch(clearCart())
-   toast.success('Payment successful. Your cart has been cleared.');
-  }
-
+    const apiUrl = process.env.NODE_ENV === 'production'
+      ? 'https://laessentials.adaptable.app/'
+      : 'http://localhost:5000';
+  
+    try {
+      await axios.post(`${apiUrl}`, {
+        token: token,
+        amount: totalAmount * 100,
+      });
+      dispatch(clearCart());
+      toast.success('Payment successful. Your cart has been cleared.');
+    } catch (error) {
+      console.error('Error making payment:', error);
+      // Handle error: display an error message, log the error, etc.
+      toast.error('Payment failed. Please try again.');
+    }
+  };
+  
   ;
     const [totalAmount, setTotalAmount] = useState(0)
     const cartItems = useSelector(state=> state.cart.productData)
