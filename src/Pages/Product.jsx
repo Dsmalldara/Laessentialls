@@ -66,9 +66,10 @@ function Product() {
         return <p>Error loading data</p>
     }
     console.log(data)
-    const ProductImages =[
-        data.media.images[0].url,data.media.images[1].url,data.media.images[2].url,data.media.images[3].url
-    ]
+    const ProductImages = data.media.images.map(image => image.url);
+    // [
+    //     data.media.images[0].url,data.media.images[1].url,data.media.images[2].url,data.media.images[3].url
+    // ]
     const addedItems ={
         id: {id},
         name: data.name,
@@ -102,8 +103,9 @@ function Product() {
          <div className='relative  md:h-[500px]  px-7'>
          <div className='md:w-[28vw] mx-auto  w-[70vw] h-full flex overflow-hidden '>
             <div className='w-full h-full flex  transition-transform duration-1000 ease-in-out'
-            style={{transform:`translateX(-${currentSlide * 100}%)`}}>
-                 <img src={`http://${ProductImages[0]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
+             style={{transform:`translateX(-${currentSlide * 100}%)`}}
+            >
+                <img src={`http://${ProductImages[0]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
                 <img src={`http://${ProductImages[1]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
                 <img src={`http://${ProductImages[2]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>
                 <img src={`http://${ProductImages[3]}`} alt="" className='md:w-[30vw] w-[70vw] h-[30rem] object-cover'/>

@@ -43,11 +43,11 @@ function Navbar() {
             </ul>
             <Link to='Laessentials/cart'>
           <div className='relative  cursor-pointer'>
-          <div className='text-4xl text-red-900 '>
+          <div className='text-3xl text-red-900 '>
                 <BsHandbag/>
             </div>
-            <div className='absolute top-[-0.4rem] right-[-1.2rem] w-8 h-8 rounded-full bg-red-700  font-lato font-semibold'>
-               <p className='mt-1 text-white'>
+            <div className='absolute top-[-0.1rem] right-[-0.7rem] p-[0.3rem] px-2 rounded-full bg-red-700  font-lato font-semibold'>
+               <p className='m-0 text-white text-sm leading-3'>
                   {cart.length}
                </p>
             </div>
@@ -55,10 +55,10 @@ function Navbar() {
           </Link>
            <Link to='/Laessentials/cart/login'>
            {
-            userInfo ? <img src={userInfo.image} className='w-[3rem] h-[2.4rem] rounded-[100%] object-contain' alt="" />  
+            userInfo ? <img src={userInfo.image} className='w-[3rem] h-[2.4rem]  rounded-[100%] object-contain' alt="" />  
             :
-            <div className='w-[3.2rem] h-[2.7rem] border-2  rounded-[100%]'>
-              <MdPerson2 className='text-4xl w-[3rem] h-[2.5rem]  rounded-[100%]'/>
+            <div className='w-[2rem] h-[2rem] bg-blue-100 border flex flex-row justify-center items-center rounded-[100%] border-blue-200'>
+              <MdPerson2 className='text-2xl'/>
            </div>
            }
            </Link>
