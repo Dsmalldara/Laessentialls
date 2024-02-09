@@ -24,10 +24,15 @@ const CartItem =({product})=>{
        <div>
        <p className="text-sm">
        <div className='flex items-center border border-gray-200 rounded-md p-2 gap-2 text-sm font-semibold bg-slate-100'>
-               <button className=' h-8 justify-center flex items-center text-base text-white bg-slate-300 hover:bg-slate-500 duration-500  hover:text-white font-normal  cursor-pointer   border' onClick={()=>dispatch(decreaseQuantity({
-                id:product.id,
-                quantity:product.quantity
-               }))}>-</button>
+               <button className= {`${product.quantity === 1 ? '' :  'h-8 justify-center flex items-center text-base text-white bg-slate-300 hover:bg-slate-500 duration-500  hover:text-white font-normal  cursor-pointer   border'}`} 
+            
+   onClick={ product.quantity === 1 ? ()=>dispatch(removeFromCart(product.id)) & toast.error(`${product.name} is removed`) : ()=>dispatch(decreaseQuantity({
+   id:product.id,
+    quantity:product.quantity
+   }))}
+               >
+                  -
+               </button>
                <span className='mx-2'>
               {product.quantity}
                </span>
