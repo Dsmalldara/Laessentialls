@@ -10,9 +10,12 @@ import { AiFillYoutube } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
   return (
-    <div className="bg-black text-[#949494] py-20 ">
-      <div className="flex max-w-screen-xl h-full mx-auto items-center justify-between">
-        <div>
+    <div className="bg-black text-[#949494] py-10 md:py-20 ">
+       <h3 className="text-gray-300 md:ml-[4rem] w-36 md:text-2xl font-bold font-poppins md:hidden block ">
+            LAEssentials
+          </h3>
+      <div className="flex max-w-screen-xl h-full ml-[2rem] md:ml-0  md:items-center md:justify-between md:flex-row flex-col gap-[1.5rem]">
+        <div className="md:block hidden ">
           <h3 className="text-gray-300 ml-[4rem] w-36 md:text-2xl font-bold font-poppins">
             LAEssentials
           </h3>
@@ -69,8 +72,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="md:flex hidden">
-          <div className="flex flex-col gap-4 mt-[1rem] hover:text-gray-300 duration-150 cursor-pointer text-start">
+        <div className="md:flex ">
+          <div className="flex flex-col  gap-4 mt-[1rem] hover:text-gray-300 duration-150 cursor-pointer text-start  ">
             <p className="text-gray-300 font-poppins  text-1xl hover:text-yellow-100 duration-150 cursor-pointer">
               Minimalist
             </p>
@@ -88,8 +91,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className=" mr-[1rem] flex  flex-col gap-[1.5rem] text-start">
-          <p className="md:w-56 w-28 h-[2rem] rounded-sm shadow-sm text-black font-bold cursor-pointer bg-white hover:bg-black flex items-center justify-center hover:text-white duration-500 hover:border  hover:border-gray-200 text-sm md:text-[1rem]">
+        <div className="  md:mr-[1rem] flex  flex-col gap-[1.5rem] text-start  ">
+          <p className="md:w-56 w-36 md:ml-[-1.5rem] h-[2rem] rounded-sm shadow-sm text-black font-bold cursor-pointer bg-white hover:bg-black flex items-center justify-center hover:text-white duration-500 hover:border  hover:border-gray-200 text-sm md:text-[1rem]">
             Download App
           </p>
           <p className="text-gray-300 font-poppins  text-[0.9rem] hover:text-gray-300 duration-150 cursor-pointer">
@@ -101,8 +104,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className=" flex mt-[3rem] flex-col items-center">
-              <p className="flex font-poppins text-1xl text-center mb-[1rem] ml-[4rem]">
+      <div className=" flex mt-[3rem] flex-col justify-center items-center md:ml-[0] ml-[-2rem]">
+              <p className="flex font-poppins text-1xl  mb-[1rem] ">
                 Follow us 
               </p>
               <span className="flex flex-row  gap-4  ml-[4.5rem] cursor-pointer">
@@ -115,14 +118,14 @@ const Footer = () => {
             </div>
       <div className="flex max-w-screen-xl w-[92%] h-4 m-auto border-t-[0.2px] border-t-gray-700 md:mt-[5rem] mt-[1.5rem] items-center justify-between">
         <div className="mt-[2rem]">
-          <p className="text-sm  font-poppins font-bold cursor-pointer">
+          <p className="md:text-sm text-[0.7rem]   font-poppins font-bold cursor-pointer">
             © 2023 LAEssentials <span className=" text-5xl">.</span> All Rights
             Reserved.
           </p>
         </div>
         <div className="mt-[2rem]">
           <ul className="md:flex flex flex-col gap-4 mt-[2rem] cursor-pointer">
-            <li className="text-sm font-poppins font-bold hover:text-gray-300 duration-150">
+            <li className="md:text-sm  text-[0.7rem] font-poppins font-bold hover:text-gray-300 duration-150">
               Terms & Conditions
             </li>
           </ul>
