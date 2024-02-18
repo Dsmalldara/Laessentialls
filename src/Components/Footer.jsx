@@ -11,7 +11,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
   return (
     <div className="bg-black text-[#949494] py-10 md:py-20 ">
-       <h3 className="text-gray-300 md:ml-[4rem] w-36 md:text-2xl font-bold font-poppins md:hidden block ">
+       <h3 className="text-gray-300 md:ml-[4rem] w-36 md:text-2xl text-blue-600 font-bold font-poppins md:hidden block ">
             LAEssentials
           </h3>
       <div className="flex max-w-screen-xl h-full ml-[2rem] md:ml-0  md:items-center md:justify-between md:flex-row flex-col gap-[1.5rem]">
@@ -116,10 +116,10 @@ const Footer = () => {
                 <AiFillLinkedin className="text-2xl  hover:text-yellow-100" />
               </span>
             </div>
-      <div className="flex max-w-screen-xl w-[92%] h-4 m-auto border-t-[0.2px] border-t-gray-700 md:mt-[5rem] mt-[1.5rem] items-center justify-between">
+      <div className="flex max-w-screen-xl w-[92%] h-4 m-auto border-t-[0.2px] border-t-gray-700 md:mt-[3rem] mt-[1.5rem] items-center justify-between">
         <div className="mt-[2rem]">
           <p className="md:text-sm text-[0.7rem]   font-poppins font-bold cursor-pointer">
-            © 2023 LAEssentials <span className=" text-5xl">.</span> All Rights
+            © 2023 LAEssentials <span className=" text-3xl">.</span> All Rights
             Reserved.
           </p>
         </div>

@@ -21,7 +21,7 @@ function Product() {
     const fetchProductDetail = async()=>{
         const options = {
             method: 'GET',
-            // url: 'https://asos2.p.rapidapi.com/products/v3/detail',
+            url: 'https://asos2.p.rapidapi.com/products/v3/detail',
             params: {
               id: id,
               lang: 'en-US',
@@ -90,6 +90,13 @@ function Product() {
        }
        return stars;
      }
+     const oldprice =()=>{
+      const  oldPrice = data.price.previous.text 
+      const newPrice = parseFloat(data.price.current.text.replace('$',''))
+      const discount = newPrice - 4
+      console.log(oldPrice)
+     return discount;
+     }
 
   return (
     <div className={`${data ? 'w-full mt-[1.5rem]' : 'h-[80vh]' }` }>
@@ -123,13 +130,13 @@ function Product() {
          <div className=' flex  items-center justify-center md:ml-[-8rem]   md:mb-0 mb-2 mt-3 text-gray-700 flex-wrap   gap-4'>
             <p className='text-sm '> Quantity: </p>
                <div className='flex items-center  gap-4 text-sm font-semibold'>
-               <button className=' h-8 justify-center flex items-center text-base text-white bg-black hover:bg-black duration-500  hover:text-white font-normal  cursor-pointer active:bg-black  border' onClick={decreaseQuantity}>-</button>
+               <div className=' h-8 justify-center flex items-center  text-white bg-black hover:bg-black duration-500  hover:text-white font-normal text-4xl px-4 font-poppins  cursor-pointer active:bg-black  border' onClick={decreaseQuantity}>-</div>
                <span className='mx-2'>
                 {
                     baseQuantity <= 0 ? 0 : baseQuantity
                 }
                </span>
-                <button className=' h-8 justify-center flex items-center text-base text-white bg-black hover:bg-black duration-500  hover:text-white font-normal cursor-pointer active:bg-black  border' onClick={()=>{setBaseQuantity  (baseQuantity +1)}}>+</button>
+                <div className=' h-8 justify-center flex items-center  text-white bg-black hover:bg-black duration-500 text-3xl px-4 font-poppins hover:text-white font-normal cursor-pointer active:bg-black  border' onClick={()=>{setBaseQuantity  (baseQuantity +1)}}>+</div>
                </div>
                <div className='bg-black rounded-[0.2rem] md:py-2 cursor-pointer py-2 md:text-sm text-sm px-2  md:px-3 shadow-md text-white  active:bg-gray-800'
                onClick={()=>dispatch(addToCart(addedItems))& toast.success(`${data.name} is added`)}
@@ -152,7 +159,7 @@ function Product() {
                 <p className=' font-lato font-light text-sm md:text-base line-through text-red-400'>{data.price.previous.text}</p>
             </div>
             <div>
-                <p className=' font-lato font-bold text-sm md:text-base'>{data.price.current.text}</p>
+                <p className=' font-lato font-bold text-xl md:text-base'>{`$${oldprice()}`}</p>
             </div>
          </div>
        </div>
@@ -160,20 +167,20 @@ function Product() {
                 <div className=' '>
                 <span>
                <IoTicketOutline className='inline-block mr-1 text-2xl md:text-3xl'/>     25% OFF AUTUMN WINS! With code: 
-                    <br /><span className='text-black'> ASOSSALEWOW</span>
+                    <br /><span className='text-black font-lato'> ASOSSALEWOW</span>
                     </span>
                 </div>
             </div>
-            <div className='mx-auto'>
+            <div className='mx-auto flex flex-col gap-[0.5rem]'>
           <div className='md:flex-row flex flex-col mx-auto md:gap-[4rem]'>
           <div className='mx-auto'>
                 <p className='font-lato font-bold text-sm md:text-base text-gray-600'>Free shipping on orders over <span className='font-extrabold font-poppins'>$50</span></p>
             </div>
-            <div className='mx-auto'>
+            <div className=' items-start justify-start flex text-start mt-[0.5rem]'>
                 <p className='font-lato  text-sm md:text-base text-black font-bold'>product type: <span className='font-light font-serif'> {data.productType.name} </span>             </p>
             </div>
           </div>
-          <div className='flex items-start justify-start'>
+          <div className='flex items-start justify-start text-start'>
           <p>
                 <span className='font-lato font-bold text-sm md:text-base'>Category: </span>
                 <span className='font-lato font-light text-sm md:text-base mt-2'>{data.gender}</span>

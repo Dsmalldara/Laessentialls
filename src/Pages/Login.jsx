@@ -49,7 +49,7 @@ function Login() {
    const userInfo = useSelector(state=>state.cart.userInfo)
   return (
     <div className=' bg-gray-300 py-[5rem] px-4'>
-            <div className='w-[88%] lg:w-[50%] py-[7rem] rounded-md backdrop-blur-md shadow-xl opacity-85 sm:px-6 mx-auto lg:px-3 bg-yellow-100'>
+            <div className='w-[88%] lg:w-[50%] py-[7rem] rounded-md backdrop-blur-md shadow-xl opacity-85 sm:px-6 mx-auto lg:px-3 bg-white'>
             <div className="lg:text-center items-center justify-center flex gap-4">
                 {
                 userInfo ?
@@ -57,9 +57,9 @@ function Login() {
                         Sign out
                     </button>
                 :
-                <div onClick={handleGoogleLogin} className='px-3 py-2 border shadow-lg rounded-md border-gray-900  flex gap-1 bg-white cursor-pointer'>
+                <div onClick={handleGoogleLogin} className='px-3 py-2  border shadow-lg rounded-md border-gray-900  flex gap-[0.2rem] bg-white cursor-pointer'>
                 <FcGoogle className='text-3xl'/>
-                <p className='text-xl font-semibold tracking-tight '>Sign in with Google</p>
+                <p className='text-[1.1rem] font-semibold tracking-tight '>Sign in with Google</p>
             </div>
         }
             </div>
