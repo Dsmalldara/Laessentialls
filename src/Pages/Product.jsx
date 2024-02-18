@@ -21,7 +21,7 @@ function Product() {
     const fetchProductDetail = async()=>{
         const options = {
             method: 'GET',
-            url: 'https://asos2.p.rapidapi.com/products/v3/detail',
+            // url: 'https://asos2.p.rapidapi.com/products/v3/detail',
             params: {
               id: id,
               lang: 'en-US',

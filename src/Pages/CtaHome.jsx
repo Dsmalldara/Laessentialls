@@ -3,13 +3,13 @@ const CallToAction = () => {
     return (
        <div>
          <div className="bg-gray-100 py-12 mt-2">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-5">
                 <div className="lg:text-center">
                     <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Limited time offer</h2>
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         Get 10% off your first purchase
                     </p>
-                    <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    <p className="mt-4 text-start max-w-3xl text-xl text-gray-500  mx-auto">
                         Sign up for our newsletter and receive a coupon code for 10% off your first purchase.
                     </p>
                     <div className="mt-6 max-w-lg mx-auto">

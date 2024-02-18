@@ -43,7 +43,7 @@ function Navbar() {
             </ul>
             <Link to='Laessentials/cart'>
           <div className='relative  cursor-pointer'>
-          <div className='text-3xl text-red-900 '>
+          <div className=' text-3xl text-red-900 '>
                 <BsHandbag/>
             </div>
             <div className='absolute top-[-0.1rem] right-[-0.7rem] p-[0.3rem] px-2 rounded-full bg-red-700  font-lato font-semibold'>

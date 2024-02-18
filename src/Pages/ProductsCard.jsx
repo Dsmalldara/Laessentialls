@@ -31,11 +31,11 @@ const ProductsCard =({product})=> {
     </div>
    <div className="flex w-full justify-between items-center gap-[1rem]">
    <div>
-      <h2 className="md:text-[0.8rem] tracking-tighter text-[0.7rem] font-bold w-[95%] md:w-[62%] ">
+      <p className="md:text-[0.8rem] tracking-tight md:text-[0.8rem] text-[0.6rem] font-bold w-[95%] md:w-[62%] md:ml-[0.8rem] ml-[0.5rem] text-start ">
         {
-            product?.name.length > 40 ? product.name.slice(0,35) + '...' : product.name
+            product?.name.length > 40 ? product.name.slice(0,45) + '...' : product.name
         }
-      </h2>
+      </p>
     </div>
     <div className="flex gap-0 relative w-full md:w-48 overflow-hidden">
     <p className="font-bold flex gap-2 transform group-hover:translate-x-56 transition-transform duration-500 ">

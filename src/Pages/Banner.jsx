@@ -16,8 +16,8 @@ function Banner() {
     const BannerData=[Banner3,Banner2,Banner1,Banner4]
   return (
     <div className='w-full h-auto overflow-x-hidden'>
-        <div className='h-[29vh] w-[100%]  md:h-[500px] relative'>
-        <div className='w-[400vw] h-full flex  transition-transform duration-1000 ease-in-out'
+        <div className='h-[29vh]  w-[100%]  md:h-[500px] relative'>
+        <div className='w-[400vw]  h-full flex  transition-transform duration-1000 ease-in-out'
         style={{transform:`translateX(-${currentSlide * 100}vw)`}}
         >
                 <div className='w-full mb-[4rem]'>
@@ -34,10 +34,10 @@ function Banner() {
                 </div>  
             </div>
             <div className='absolute  bottom-0 mx-auto left-0 right-0 w-fit flex gap-12 '>
-                    <div onClick={prevSlide} className='w-14 h-12 border cursor-pointer flex items-center justify-center hover:bg-gray-700 active:bg-gray-700 duration-300  hover:text-white border-gray-500'>
+                    <div onClick={prevSlide} className='w-14 h-12 border cursor-pointer flex items-center justify-center md:hover:bg-gray-70 md:active:bg-gray-700 duration-300  md:hover:text-white  md:border-gray-500'>
                     <HiArrowLeft/>
                     </div>
-                    <div onClick={nextSlide} className='w-14 h-12 border cursor-pointer flex items-center justify-center hover:bg-gray-700 active:bg-gray-700 duration-300  hover:text-white border-gray-500'>
+                    <div onClick={nextSlide} className='w-14 h-12 border cursor-pointer flex items-center justify-center md:hover:bg-gray-700 md:active:bg-gray-700 duration-300  md:hover:text-white md:border-gray-500'>
                     <HiArrowRight/>
                     </div>
                 </div>
