@@ -45,9 +45,9 @@ const options = {
 
     if (isLoading) {
       return <div className='flex h-[30vh] items-center justify-center mt-[1.7rem] gap-[1.5rem]  '>
-        <div className='w-[2rem]  h-[2rem] rounded-full border-2 border-slate-600 border-b-2 border-b-slate-200  animate-spin' ></div>
+        <div className='w-[2rem]  h-[2rem] rounded-full border-2 border-blue-800 border-b-2 border-b-slate-200  animate-spin' ></div>
             <div>
-                <h2 className=' font-poppins text-xl font-bold '>Loading...</h2>
+                <h2 className=' font-poppins text-xl font-bold  text-blue-800'>Loading...</h2>
             </div>
       </div>
     }
