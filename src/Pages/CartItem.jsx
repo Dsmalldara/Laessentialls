@@ -7,9 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const CartItem =({product})=>{
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const handleProduct=(id)=>{
-      navigate(`/Laessentials/${id}`)
-    } 
     return (
        <div  className='items-center justify-center md:justify-between  md:gap-6 gap-[1rem] mb-[1rem] flex'>
          <div className="flex items-start gap-2 ">

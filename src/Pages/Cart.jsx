@@ -101,8 +101,8 @@ function Cart() {
  </div>
 </div>
 <div className='px-8 mt-[-3rem]'>
-    {cartItems.map((product) => (
-      <CartItem product={product} key={product.id} />
+    {cartItems.map((product,index) => (
+      <CartItem product={product} key={product.index} />
     )
     )}
     

@@ -12,12 +12,15 @@ import { toast } from "react-toastify";
 function Product() {
   const dispatch = useDispatch();
   const { id } = useParams();
+   // Example object containing the id property
+const idValue = parseFloat(id);
+console.log(id)
   const fetchProductDetail = async () => {
     const options = {
       method: "GET",
       url: "https://asos2.p.rapidapi.com/products/v3/detail",
       params: {
-        id: id,
+        id: idValue,
         lang: "en-US",
         store: "US",
         sizeSchema: "US",
@@ -81,7 +84,7 @@ function Product() {
   //     data.media.images[0].url,data.media.images[1].url,data.media.images[2].url,data.media.images[3].url
   // ]
   const addedItems = {
-    id: { id },
+    id: id,
     name: data.name,
     price: data.price.current.text,
     imageUrl: data.media.images[0].url,
