@@ -10,12 +10,6 @@ import { addToCart } from "../Redux/CartSlice";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 function Product() {
-  const [baseQuantity, setBaseQuantity] = useState(1);
-  const decreaseQuantity = () => {
-    if (baseQuantity > 0) {
-      setBaseQuantity(baseQuantity - 1);
-    }
-  };
   const dispatch = useDispatch();
   const { id } = useParams();
   const fetchProductDetail = async () => {
@@ -52,6 +46,12 @@ function Product() {
         ? currentSlide
         : currentSlide + 1
     );
+  };
+  const [baseQuantity, setBaseQuantity] = useState(1);
+  const decreaseQuantity = () => {
+    if (baseQuantity > 0) {
+      setBaseQuantity(baseQuantity - 1);
+    }
   };
   const { data, isLoading, isError } = useQuery(
     ["productDetail", id],
@@ -175,13 +175,13 @@ const item = <div className="w-[1rem] h-[1rem] border   rounded-[100%] mx-1">
           <div className="absolute  hidden md:flex top-[50%] mx-auto gap-[12rem] md:gap-[18rem] lg:gap-[22rem] md:ml-0 ml-1   w-fit  ">
             <div
               onClick={prevSlide}
-              className="md:ml-[-3.4rem] py-4 px-4 border border-slate-400 focus:border-green-200 focus:border hover:border hover:border-green-300"
+              className="md:ml-[-3.4rem] py-4 px-4"
             >
               <HiArrowLeft className="text-4xl text-black cursor-pointer" />
             </div>
             <div
               onClick={nextSlide}
-              className="py-4 px-4 focus:border-green-200 border border-slate-400 focus:border hover:border hover:border-green-300"
+              className="py-4 px-4 "
             >
               <HiArrowRight className="text-4xl text-black cursor-pointer" />
             </div>

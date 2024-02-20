@@ -44,7 +44,7 @@ const ProductsCard =({product})=> {
     <p className="absolute font-nunito font-bold top-0 left-0 tracking-tighter   z-20 w-[100px] text-gray-600 hover:text-gray-900 flex items-center justify-center transform gap-[0.15rem] -translate-x-32 group-hover:translate-x-0 transition-transform duration-500 cursor-pointer text-[0.7rem] ml-[-5px] md:ml-0 md:text-[1rem]"
                    onClick={()=>dispatch(addToCart(productAdded))& toast.success(`${product.name} is added`)}
     >
-       <span className=""><BsArrowRight/></span>
+       <span className="text-2xl"><BsArrowRight/></span>
     </p>
 </div>
 

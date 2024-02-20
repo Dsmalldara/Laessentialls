@@ -87,11 +87,9 @@ function Cart() {
   return (
     <div className=' w-full flex flex-col md:flex-row  mb-[2rem]'>
         <div className='flex flex-col md:w-2/3 bg-white rounded-md '>
-         <div className='items-start justify-start flex flex-col ml-4 md:ml-6 mt-[2rem]'>
- <h1 className='text-4xl font-poppins font-bold text-black'>Your Cart</h1>
- <p className='text-black font-lato'>
-     you have {cartItems.length} {cartItems.length === 1 ? 'item' :  'items'} in your cart
- </p>
+         <div className='flex flex-col items-center justify-center ml-4 md:ml-6 mt-[2rem]'>
+ <h1 className='text-2xl font-lato font-bold text-black'>Your Cart ({cartItems.length} {cartItems.length === 1 ? 'item' :  'items'})</h1>
+
  <div className={`mt-[2rem] mx-auto ${cartItems.length === 0 ? ' md:py-0 py-[3rem]' : 'py-[1.5rem]'}`}>
     {
       cartItems.length === 0 ? <p className='text-black font-lato text-1xl '>
@@ -102,7 +100,7 @@ function Cart() {
     }
  </div>
 </div>
-<div className='px-8'>
+<div className='px-8 mt-[-3rem]'>
     {cartItems.map((product) => (
       <CartItem product={product} key={product.id} />
     )
@@ -129,9 +127,9 @@ function Cart() {
             </span>
             </div>
             <div className="flex items-start gap-4 text-base">   
-    <span>Shipping Information</span>
-    <p className='flex font-extralight text-sm'>
-        Thank you for choosing our shipping services. We're dedicated to providing you with excellent shipping service at a fast delivery time.
+    <span className='text-sm text-start'>Shipping Information</span>
+    <p className='flex font-extralight text-sm text-start'>
+       We're dedicated to providing you with excellent shipping service at a fast delivery time.
     </p>
 
             </div>
@@ -141,7 +139,7 @@ function Cart() {
                 Total</span> <span className='text-base font-bold  mr-2 md:mr-4'>${totalAmount}</span>
             </p>
         <button onClick={onClickCheckout} className='md:text-base text-sm bg-black text-white w-[50%] mx-auto md:w-full py-3   hover:bg-gray-800 duration-300 flex justify-between'>
-            Proceed to checkout <span><BsLockFill className='text-2xl text-white'/></span>
+            Proceed to checkout
         </button>
         {
           paynow && <div className='mt-2'>
