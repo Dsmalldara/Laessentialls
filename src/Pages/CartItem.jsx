@@ -5,8 +5,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 const CartItem =({product})=>{
-  console.log(product.id)
-    const dispatch = useDispatch()
+    const dispatch = useDispatch() 
+    const id = product.id
+    const urlId = typeof id === 'string' ? id : parseFloat(id.id)
+    console.log(urlId)
     return (
        <div  className='items-center justify-center md:justify-between  md:gap-6 gap-[1rem] mb-[1rem] flex'>
          <div className="flex items-start gap-2 ">
@@ -14,7 +16,7 @@ const CartItem =({product})=>{
            <MdOutlineClose onClick={()=>dispatch(removeFromCart(product.id)) & toast.error(`${product.name} is removed`)} className='text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300' />
            </span>
        <div className='w-[5rem]'>
-   <Link to={`/Laessentials/${product.id.id}`}>
+   <Link to={`/Laessentials/${urlId}`}>
    <img src={`http://${product.imageUrl}`} alt='productImage' className="md:w-32 md:h-20   h-[5rem] object-fill  "/>
     </Link>
        </div>
