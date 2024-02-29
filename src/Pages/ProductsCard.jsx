@@ -31,14 +31,14 @@ const ProductsCard =({product})=> {
     </div>
    <div className="flex w-full justify-between items-center gap-[1rem]">
    <div>
-      <p className="md:text-[0.8rem] tracking-tight md:text-[0.8rem] text-[0.6rem] font-bold w-[95%] md:w-[62%] md:ml-[0.8rem] ml-[0.5rem] text-start ">
+      <p className=" tracking-tight md:text-[0.8rem] text-[0.6rem] font-nunito  w-[95%] md:w-[95%] md:ml-[0.8rem] ml-[0.5rem] text-start line-clamp-2">
         {
-            product?.name.length > 40 ? product.name.slice(0,45) + '...' : product.name
+            product.name
         }
       </p>
     </div>
     <div className="flex gap-0 relative w-full md:w-48 overflow-hidden">
-    <p className="font-bold flex gap-2 transform group-hover:translate-x-56 transition-transform duration-500 ">
+    <p className=" flex font-semibold ml-[1rem] transform group-hover:translate-x-56 transition-transform duration-500 ">
         {product?.price?.current?.text ? product.price.current.text : 'Current price not available'}
     </p>
     <p className="absolute font-nunito font-bold top-0 left-0 tracking-tighter   z-20 w-[100px] text-gray-600 hover:text-gray-900 flex items-center justify-center transform gap-[0.15rem] -translate-x-32 group-hover:translate-x-0 transition-transform duration-500 cursor-pointer text-[0.7rem] ml-[-5px] md:ml-0 md:text-[1rem]"

@@ -22,9 +22,8 @@ const CartItem =({product})=>{
        </div>
         </div>
       <div>
-      <h2 className="md:text-sm text-sm font-bold font-poppins md:flex hidden md:w-52">
-            {
-                product.name.length <= 45 ?  product.name : `${product.name.slice(0,45)}....` }
+      <h2 className="md:text-sm text-sm font-bold font-poppins md:flex hidden md:w-52 line-clamp-2">
+            {product.name }
         </h2>
       </div>
        <div className='  md:mr-0'>

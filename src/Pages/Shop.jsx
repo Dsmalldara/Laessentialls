@@ -63,12 +63,12 @@ const options = {
         <div className='mx-auto max-w-screen-xl px-3'>
          <div className='flex flex-col gap-2'>
          <h1 className='md:w-[30%] w-[75%]  px-3 py-3 bg-black border border-black rounded-md focus:ring-2 focus:ring-offset-2 focus-outline-none focus:ring-black mx-auto '>
-                <p className='text-white text-center font-poppins text-xl font-bold  tracking-wide text-1xl md:text-base'>Start Shopping  <span className=' inline-block ml-2 text-2xl rotate-180'><BsArrow90DegUp/></span></p>
+                <p className='text-white text-center font-poppins text-xl font-bold  tracking-wide text-1xl md:text-base antialiased'>Start Shopping  <span className=' inline-block ml-2 text-2xl rotate-180'><BsArrow90DegUp/></span></p>
             </h1>
             <span className='w-20 h-[3px]  bg-black mx-auto'>
             </span>
          </div>
-                     <p className='text-black font-lato mt-4 max-w-xl mx-auto'>
+                     <p className='text-black font-lato mt-4 max-w-xl mx-auto antialiased'>
                         Discover a world of high-quality products, exceptional deals, and a seamless shopping experience. Start your shopping journey now and find everything you need to enhance your lifestyle.
                     </p>
             
