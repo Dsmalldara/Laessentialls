@@ -37,14 +37,14 @@ const ProductsCard =({product})=> {
         }
       </p>
     </div>
-    <div className="flex gap-0 relative w-full md:w-48 overflow-hidden">
-    <p className=" flex font-semibold ml-[1rem] transform group-hover:translate-x-56 transition-transform duration-500 ">
+    <div className="flex gap-0 relative md:ml-0 ml-[-0.5rem] w-[93%] md:w-48 overflow-hidden">
+    <p className=" flex md:font-semibold  transform group-hover:translate-x-56 md:text-base transition-transform duration-500  text-[0.6rem]">
         {product?.price?.current?.text ? product.price.current.text : 'Current price not available'}
     </p>
     <p className="absolute font-nunito font-bold top-0 left-0 tracking-tighter   z-20 w-[100px] text-gray-600 hover:text-gray-900 flex items-center justify-center transform gap-[0.15rem] -translate-x-32 group-hover:translate-x-0 transition-transform duration-500 cursor-pointer text-[0.7rem] ml-[-5px] md:ml-0 md:text-[1rem]"
                    onClick={()=>dispatch(addToCart(productAdded))& toast.success(`${product.name} is added`)}
     >
-       <span className="text-2xl"><BsArrowRight/></span>
+       <span className=" text-xl md:text-2xl ml-[-3.4rem] md:ml-0"><BsArrowRight/></span>
     </p>
 </div>
 
