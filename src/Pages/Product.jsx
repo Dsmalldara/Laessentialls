@@ -9,6 +9,8 @@ import { AiTwotoneStar } from "react-icons/ai";
 import { addToCart } from "../Redux/CartSlice";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
+import { Box } from "@mui/material";
+import {Skeleton} from "@mui/material";
 function Product() {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -68,9 +70,23 @@ console.log(id)
   if (isLoading) {
     return (
       <div className="flex items-center justify-center mt-[1.7rem] gap-[1.5rem] h-[30rem] ">
-        <div className="w-[2rem] h-[2rem] rounded-full border-2 border-slate-600 border-b-2 border-b-slate-200  animate-spin"></div>
+        {/* <div className="w-[2rem] h-[2rem] rounded-full border-2 border-slate-600 border-b-2 border-b-slate-200  animate-spin"></div>
         <div>
           <h2 className=" font-poppins text-xl font-bold">Loading...</h2>
+        </div> */}
+<div className="md:grid hidden">
+    <Box sx={{ width: 300 }}>
+      <Skeleton width={420} animation="wave" height={70}/>
+      <Skeleton animation="wave"  width={420} height={70}/>
+      <Skeleton animation={true}  width={420} height={70}/>
+    </Box>
+    </div>
+        <div className="md:hidden grid">
+        <Box sx={{ width: 270 }}>
+      <Skeleton width={250} animation="wave" height={40}/>
+      <Skeleton animation="wave"  width={250} height={40}/>
+      <Skeleton animation={true}  width={250} height={40}/>
+    </Box>
         </div>
       </div>
     );
