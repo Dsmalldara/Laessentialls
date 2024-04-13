@@ -263,14 +263,14 @@ const item = <div className="w-[1rem] h-[1rem] border   rounded-[100%] mx-1">
               </p>
             </div>
             <div className="flex items-center justify-center mt-[2rem] md:gap-[4rem] gap-[2rem]">
-              <div>
+              {/* <div>
                     <p className=" font-lato font-bold text-xl md:text-2xl  text-red-400">{`$${oldprice()}`}</p>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <p className=" font-lato font-light text-sm md:text-base line-through">
                   {data.price?.previous?.text}
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="px-2 py-3   w-[98%] md:w-[70%] md:mx-auto bg-slate-300 text-white font-lato font-bold tracking-tighter md:tracking-normal text-sm md:text-base ">
