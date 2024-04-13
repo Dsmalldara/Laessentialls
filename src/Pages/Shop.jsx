@@ -42,7 +42,7 @@ const options = {
       cacheTime: 5000
   });
   
-
+  console.log(data)
     if (isLoading) {
       return <div className='flex h-[30vh] items-center justify-center mt-[1.7rem] gap-[1.5rem]  '>
         <div className='w-[2rem]  h-[2rem] rounded-full border-2 border-blue-800 border-b-2 border-b-slate-200  animate-spin' ></div>
@@ -56,7 +56,7 @@ const options = {
       return <p className='text-red-500 '>Error loading data</p>;
     }
 
-    console.log(data.products)
+    let ProductsData =data.products
        
   return (
     <div className='py-8'>
@@ -77,7 +77,7 @@ const options = {
         </div>
         <div className='mx-auto max-w-screen-xl  px-3 py-8 grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 md:gap-10'>
            {
-            data.products.map((product)=>{
+            ProductsData.map((product)=>{
                 return(
                     <ProductsCard product={product} key={product.id}/>
                 )

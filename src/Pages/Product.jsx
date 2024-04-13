@@ -15,7 +15,7 @@ function Product() {
   const dispatch = useDispatch();
   const { id } = useParams();
    // Example object containing the id property
-const idValue = parseFloat(id);
+let idValue = parseFloat(id);
 console.log(id)
   const fetchProductDetail = async () => {
     const options = {
@@ -102,7 +102,7 @@ console.log(id)
   const addedItems = {
     id: id,
     name: data.name,
-    price: data.price.current.text,
+    price: data.price?.current?.text,
     imageUrl: data.media.images[0].url,
     brandName: data.productType.name,
     quantity: baseQuantity,
@@ -120,8 +120,8 @@ console.log(id)
     return stars;
   };
   const oldprice = () => {
-    const oldPrice = data.price.previous.text;
-    const newPrice = parseFloat(data.price.current.text.replace("$", ""));
+    const oldPrice = data.price?.previous?.text;
+    const newPrice = parseFloat(data.price?.current?.text.replace("$", ""));
     const discount = newPrice -4
     return discount.toFixed(2)
   };
@@ -268,7 +268,7 @@ const item = <div className="w-[1rem] h-[1rem] border   rounded-[100%] mx-1">
               </div>
               <div>
                 <p className=" font-lato font-light text-sm md:text-base line-through">
-                  {data.price.previous.text}
+                  {data.price?.previous?.text}
                 </p>
               </div>
             </div>
