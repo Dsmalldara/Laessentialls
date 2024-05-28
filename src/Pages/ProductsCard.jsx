@@ -13,7 +13,7 @@ const ProductsCard =({product})=> {
   const productAdded = {
     id: product.id,
     name: product.name,
-    price: product.price.current.text,
+    price: product.id,
     imageUrl: product.imageUrl,
     brandName: product.brandName,
     quantity: 1

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { FcShipped } from 'react-icons/fc'
 import CartItem from './CartItem'
-import {BsLockFill} from 'react-icons/bs'
 import { toast } from 'react-toastify'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
@@ -77,8 +76,12 @@ function Cart() {
     let price = 0;
     
     cartItems.map((item)=>{
-        const itemPrice = parseFloat(item.price.replace('$', ''));
-        price += parseFloat(itemPrice)* item.quantity
+        let itemPrice = item.price
+            itemPrice = itemPrice.toString().slice(0,2)
+            itemPrice = parseInt(itemPrice,10)
+         
+        price += itemPrice* item.quantity
+        console.log(itemPrice)
         return price
     })
     

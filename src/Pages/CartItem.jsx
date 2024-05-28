@@ -9,6 +9,11 @@ const CartItem =({product})=>{
     const id = product.id
     const urlId = typeof id === 'string' ? id : parseFloat(id.id)
     console.log(urlId)
+    const itemPrice = (product)=>{
+      let price = product.price
+      let finalPrice = price.toString().slice(0,2)
+      return finalPrice
+    }
     return (
        <div  className='items-center justify-center md:justify-between  md:gap-6 gap-[1rem] mb-[1rem] flex'>
          <div className="flex items-start gap-2 ">
@@ -27,7 +32,8 @@ const CartItem =({product})=>{
         </h2>
       </div>
        <div className='  md:mr-0'>
-       <p className="md:text-xl text-sm font-bold font-poppins ">{product.price}</p>
+        {/* price */}
+       <p className="md:text-xl text-sm font-bold font-poppins ">${itemPrice(product)}</p>
        </div>
        <div>
        <p className="text-sm">

@@ -14,7 +14,7 @@ const Footer = () => {
        <h3 className="text-gray-300 md:ml-[4rem] w-36 md:text-2xl text-blue-600 font-bold font-poppins md:hidden block ">
             LAEssentials
           </h3>
-      <div className="flex max-w-screen-xl h-full ml-[2rem] md:ml-0  md:items-center md:justify-between md:flex-row flex-col gap-[1.5rem]">
+      <div className="flex max-w-screen-xl h-full ml-[2rem] md:ml-0  md:items-center justify-between md:flex-row flex-row  gap-[1.5rem]">
         <div className="md:block hidden ">
           <h3 className="text-gray-300 ml-[4rem] w-36 md:text-2xl font-bold font-poppins">
             LAEssentials
@@ -91,10 +91,10 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="  md:mr-[1rem] flex  flex-col gap-[1.5rem] text-start  ">
-          <p className="md:w-56 w-36 md:ml-[-1.5rem] h-[2rem] rounded-sm shadow-sm text-black font-bold cursor-pointer bg-white hover:bg-black flex items-center justify-center hover:text-white duration-500 hover:border  hover:border-gray-200 text-sm md:text-[1rem]">
+        <div className="  md:mr-[1rem]  mr-[2rem] flex  flex-col gap-[1.5rem] text-start  ">
+          {/* <p className="md:w-56 w-36 md:ml-[-1.5rem] h-[2rem] rounded-sm shadow-sm text-black font-bold cursor-pointer bg-white hover:bg-black flex items-center justify-center hover:text-white duration-500 hover:border  hover:border-gray-200 text-sm md:text-[1rem]">
             Download App
-          </p>
+          </p> */}
           <p className="text-gray-300 font-poppins  text-[0.9rem] hover:text-gray-300 duration-150 cursor-pointer">
             Contact Us
           </p>

@@ -16,7 +16,6 @@ function Product() {
   const { id } = useParams();
    // Example object containing the id property
 let idValue = parseFloat(id);
-console.log(id)
   const fetchProductDetail = async () => {
     const options = {
       method: "GET",
@@ -67,6 +66,7 @@ console.log(id)
       cacheTime: 5000,
     }
   );
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center mt-[1.7rem] h-[30rem] ">
@@ -96,13 +96,11 @@ console.log(id)
   }
   console.log(data);
   const ProductImages = data.media.images.map((image) => image.url);
-  // [
-  //     data.media.images[0].url,data.media.images[1].url,data.media.images[2].url,data.media.images[3].url
-  // ]
+
   const addedItems = {
     id: id,
     name: data.name,
-    price: data.price?.current?.text,
+    price: data?.brand?.id,
     imageUrl: data.media.images[0].url,
     brandName: data.productType.name,
     quantity: baseQuantity,
@@ -120,10 +118,13 @@ console.log(id)
     return stars;
   };
   const oldprice = () => {
-    const oldPrice = data.price?.previous?.text;
-    const newPrice = parseFloat(data.price?.current?.text.replace("$", ""));
-    const discount = newPrice -4
-    return discount.toFixed(2)
+   
+    let newPrice = data.id
+        newPrice = newPrice.toString().slice(0,2)
+        newPrice = parseInt(newPrice,10)
+    let discount = newPrice -4
+    let discountStr = discount.toString().slice(0, 2)
+    return  discountStr
   };
 // active bullet for image
 const item = <div className="w-[1rem] h-[1rem] border   rounded-[100%] mx-1">
@@ -263,14 +264,14 @@ const item = <div className="w-[1rem] h-[1rem] border   rounded-[100%] mx-1">
               </p>
             </div>
             <div className="flex items-center justify-center mt-[2rem] md:gap-[4rem] gap-[2rem]">
-              {/* <div>
+              <div>
                     <p className=" font-lato font-bold text-xl md:text-2xl  text-red-400">{`$${oldprice()}`}</p>
-              </div> */}
-              {/* <div>
-                <p className=" font-lato font-light text-sm md:text-base line-through">
-                  {data.price?.previous?.text}
+              </div> 
+               <div>
+                <p className=" font-lato font-light text-xl  md:text-2xl line-through">
+                ${data.id.toString().slice(0,2)}
                 </p>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="px-2 py-3   w-[98%] md:w-[70%] md:mx-auto bg-slate-300 text-white font-lato font-bold tracking-tighter md:tracking-normal text-sm md:text-base ">
